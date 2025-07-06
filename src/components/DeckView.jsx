@@ -14,7 +14,7 @@ export default function DeckView({ deck, onBack }) {
   const fetchCards = async () => {
     try {
       const { data, error } = await supabase
-        .from('cards')
+        .from('cards2')
         .select('*')
         .eq('deck_id', deck.id)
         .order('created_at')
